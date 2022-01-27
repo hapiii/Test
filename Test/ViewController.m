@@ -6,8 +6,10 @@
 //
 
 #import "ViewController.h"
+#import "IndexViewController.h"
 
 @interface ViewController ()
+
 
 @end
 
@@ -15,8 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self pushViewController:[IndexViewController new] animated:NO];
 }
-
 
 @end
