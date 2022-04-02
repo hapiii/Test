@@ -1,16 +1,18 @@
 PODS:
-  - YYText (1.0.7)
+  - SDWebImage (5.12.4):
+    - SDWebImage/Core (= 5.12.4)
+  - SDWebImage/Core (5.12.4)
 
 DEPENDENCIES:
-  - YYText
+  - SDWebImage
 
 SPEC REPOS:
   trunk:
-    - YYText
+    - SDWebImage
 
 SPEC CHECKSUMS:
-  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+  SDWebImage: 631cf572cc93dfdfe54162e556410a61f1141928
 
-PODFILE CHECKSUM: 157dbbc3f7cc2861b8f5dbfff413b0f12262900b
+PODFILE CHECKSUM: a6675434d7d0a58c1991cf779bab7fceded3e03d
 
 COCOAPODS: 1.11.2

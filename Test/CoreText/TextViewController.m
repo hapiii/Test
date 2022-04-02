@@ -21,6 +21,9 @@
     [self.view addSubview:show];
 }
 
+- (void)dealloc {
+    NSLog(@"dealloc");
+}
 
 
 @end
