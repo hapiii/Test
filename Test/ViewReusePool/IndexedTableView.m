@@ -48,7 +48,6 @@
         arrayTitles = [self.indexedDataSource indexTitlesForIndexTableView:self];
     }
     
-    // 判断字母索引条是否为空
     if (!arrayTitles || arrayTitles.count <= 0) {
         [containerView setHidden:YES];
         return;
