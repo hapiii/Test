@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "IndexViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -17,7 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self pushViewController:[IndexViewController new] animated:NO];
+    NSLog(@"%@",self.view.backgroundColor);
+    self.navigationBar.translucent = NO;
+    IndexViewController *vc = [[IndexViewController alloc] init];
+    [self pushViewController:vc animated:NO];
 }
 
 @end

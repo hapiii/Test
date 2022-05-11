@@ -17,6 +17,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     //1
+    _arrs = [[NSArray alloc]init];
+    // main 2
     return YES;
 }
 

@@ -6,10 +6,12 @@
 //
 
 #import "IndexViewController.h"
+#import "AppDelegate.h"
 
 @interface IndexViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tb;
 @property (nonatomic, strong) NSMutableArray <NSString *> *routers;
+
 @end
 
 @implementation IndexViewController
@@ -17,6 +19,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configUI];
+    
+    NSString *content = @"123";
+    NSRange range = NSMakeRange(3, 3);
+    NSUInteger location = range.location;
+    
+    if (content && location > content.length) {
+        
+        NSLog(@"出现错误");
+    } else {
+        NSString *str = [content substringToIndex:location];
+        NSString *str2 =[content substringFromIndex:location];
+        NSLog(@"%@%@",str, str2);
+    }
    
 }
 
@@ -45,13 +60,27 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Class className = NSClassFromString(self.routers[indexPath.row]);
     UIViewController *vc = [[className alloc] init];
+    AppDelegate *de = [UIApplication sharedApplication].delegate;
+    de.arrs = @[vc];
     [self.navigationController pushViewController:vc animated:YES];
     
 }
 
 - (NSMutableArray<NSString *> *)routers {
     if (!_routers) {
-        _routers = @[@"TextViewController"].mutableCopy;
+        _routers = @[
+            @"TextViewController",
+            @"CategoryController",
+            @"TestKVOViewController",
+            @"MethodForwardViewController",
+            @"BlockTestViewController",
+            @"GCDViewController",
+            @"LockViewController",
+            @"EventViewController",
+            @"ViewReusePoolViewController",
+            @"FrameBoundsViewController",
+            @"ProtocolViewController"
+        ].mutableCopy;
     }
     return _routers;
 }
