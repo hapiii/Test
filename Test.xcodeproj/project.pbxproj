@@ -25,6 +25,8 @@
 		BF72448427F857060029FCBE /* ViewReusePool.m in Sources */ = {isa = PBXBuildFile; fileRef = BF72448327F857060029FCBE /* ViewReusePool.m */; };
 		BF72448727F857440029FCBE /* IndexedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF72448627F857440029FCBE /* IndexedTableView.m */; };
 		BF72448A27F857730029FCBE /* ViewReusePoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF72448927F857730029FCBE /* ViewReusePoolViewController.m */; };
+		BF7269C127FEE22E0029FCBE /* FrameBoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7269C027FEE22E0029FCBE /* FrameBoundsViewController.m */; };
+		BF7269C6280014270029FCBE /* ProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7269C5280014270029FCBE /* ProtocolViewController.m */; };
 		BFB87CFE27F4343400BABE54 /* CategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB87CFD27F4343400BABE54 /* CategoryController.m */; };
 		BFB87D0127F4345600BABE54 /* CategoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB87D0027F4345500BABE54 /* CategoryObject.m */; };
 		BFB87D0427F4347C00BABE54 /* CategoryObject+AMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB87D0327F4347C00BABE54 /* CategoryObject+AMethod.m */; };
@@ -74,6 +76,11 @@
 		BF72448627F857440029FCBE /* IndexedTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IndexedTableView.m; sourceTree = "<group>"; };
 		BF72448827F857730029FCBE /* ViewReusePoolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewReusePoolViewController.h; sourceTree = "<group>"; };
 		BF72448927F857730029FCBE /* ViewReusePoolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewReusePoolViewController.m; sourceTree = "<group>"; };
+		BF7269BF27FEE22E0029FCBE /* FrameBoundsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrameBoundsViewController.h; sourceTree = "<group>"; };
+		BF7269C027FEE22E0029FCBE /* FrameBoundsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameBoundsViewController.m; sourceTree = "<group>"; };
+		BF7269C3280014160029FCBE /* ProtocolModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProtocolModel.h; sourceTree = "<group>"; };
+		BF7269C4280014270029FCBE /* ProtocolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProtocolViewController.h; sourceTree = "<group>"; };
+		BF7269C5280014270029FCBE /* ProtocolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProtocolViewController.m; sourceTree = "<group>"; };
 		BFB87CFC27F4343400BABE54 /* CategoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryController.h; sourceTree = "<group>"; };
 		BFB87CFD27F4343400BABE54 /* CategoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryController.m; sourceTree = "<group>"; };
 		BFB87CFF27F4345500BABE54 /* CategoryObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryObject.h; sourceTree = "<group>"; };
@@ -165,6 +172,8 @@
 		BF28E1DC279A546C0054E838 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				BF7269C2280013DA0029FCBE /* Protocol */,
+				BF7269BD27FEE1F00029FCBE /* FrameBounds */,
 				BF72448127F856F20029FCBE /* ViewReusePool */,
 				BF72447A27F847470029FCBE /* Events */,
 				BFE40DD727F6D5F5007F1E90 /* RunLoop */,
@@ -216,6 +225,25 @@
 				BF72448927F857730029FCBE /* ViewReusePoolViewController.m */,
 			);
 			path = ViewReusePool;
+			sourceTree = "<group>";
+		};
+		BF7269BD27FEE1F00029FCBE /* FrameBounds */ = {
+			isa = PBXGroup;
+			children = (
+				BF7269BF27FEE22E0029FCBE /* FrameBoundsViewController.h */,
+				BF7269C027FEE22E0029FCBE /* FrameBoundsViewController.m */,
+			);
+			path = FrameBounds;
+			sourceTree = "<group>";
+		};
+		BF7269C2280013DA0029FCBE /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BF7269C3280014160029FCBE /* ProtocolModel.h */,
+				BF7269C4280014270029FCBE /* ProtocolViewController.h */,
+				BF7269C5280014270029FCBE /* ProtocolViewController.m */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		BFB87CFB27F4340A00BABE54 /* Category */ = {
@@ -430,10 +458,12 @@
 				BF07BEB9279FA01B005B323A /* BaseViewController.m in Sources */,
 				BFB8899727F559E600BABE54 /* MethodForwardViewController.m in Sources */,
 				BF72448027F8477E0029FCBE /* EventView.m in Sources */,
+				BF7269C127FEE22E0029FCBE /* FrameBoundsViewController.m in Sources */,
 				BFE40DDA27F6D613007F1E90 /* RunLoopViewController.m in Sources */,
 				BF07BEC1279FA778005B323A /* TextShowView.m in Sources */,
 				BFE4063527F6A060007F1E90 /* LockViewController.m in Sources */,
 				BF07BEB6279F9F22005B323A /* IndexViewController.m in Sources */,
+				BF7269C6280014270029FCBE /* ProtocolViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

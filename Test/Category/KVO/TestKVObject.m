@@ -50,6 +50,7 @@
 
 - (void)change {
     _testString = @"hahahah1";
+    self.numberValue ++;
 }
 
 - (void)sayHello {

@@ -77,7 +77,9 @@
             @"GCDViewController",
             @"LockViewController",
             @"EventViewController",
-            @"ViewReusePoolViewController"
+            @"ViewReusePoolViewController",
+            @"FrameBoundsViewController",
+            @"ProtocolViewController"
         ].mutableCopy;
     }
     return _routers;

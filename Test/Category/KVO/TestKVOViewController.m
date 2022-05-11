@@ -29,7 +29,7 @@
     
     NSLog(@"%@-%@-%@",self.kvoBject.testString, arr2.firstObject.testString, arr3.firstObject.testString);
     
-    [self.kvoBject addObserver:self forKeyPath:@"testString" options:NSKeyValueObservingOptionNew context:nil];
+    [self.kvoBject addObserver:self forKeyPath:@"numberValue" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
     // Do any additional setup after loading the view.
 }
 

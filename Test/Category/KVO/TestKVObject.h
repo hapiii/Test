@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *testString;
 
+@property (nonatomic, assign) NSInteger numberValue;
 - (void)change;
 
 + (void)sayHello;
