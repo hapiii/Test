@@ -25,7 +25,6 @@
     NSUInteger location = range.location;
     
     if (content && location > content.length) {
-        
         NSLog(@"出现错误");
     } else {
         NSString *str = [content substringToIndex:location];
@@ -37,7 +36,7 @@
 
 - (void)configUI {
     
-    UITableView *tb = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height * 2 / 3)];
+    UITableView *tb = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     tb.delegate = self;
     tb.dataSource = self;
     [self.view addSubview:tb];
@@ -49,7 +48,8 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"1"];
     }
-    cell.textLabel.text = self.routers[indexPath.row];
+    NSString *controllerClass = self.routers[indexPath.row];
+    cell.textLabel.text = self.class.routerDic[controllerClass];
     return cell;
 }
 
@@ -79,12 +79,30 @@
             @"EventViewController",
             @"ViewReusePoolViewController",
             @"FrameBoundsViewController",
-            @"ProtocolViewController"
+            @"ProtocolViewController",
+            @"SemaphoreViewController"
         ].mutableCopy;
     }
     return _routers;
 }
 
++ (NSDictionary *)routerDic {
+    NSDictionary *dic = @{
+        @"TextViewController" : @"文本",
+        @"CategoryController" : @"分类",
+        @"TestKVOViewController" : @"KVO",
+        @"MethodForwardViewController" : @"消息转发",
+        @"BlockTestViewController" : @"block",
+        @"GCDViewController" : @"多线程",
+        @"LockViewController" : @"锁",
+        @"EventViewController" : @"事件传递",
+        @"ViewReusePoolViewController" : @"自动释放池",
+        @"FrameBoundsViewController" : @"frame 和 bounds",
+        @"ProtocolViewController" : @"协议",
+        @"SemaphoreViewController" : @"信号量"
+    };
+    return dic;
+}
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     /*

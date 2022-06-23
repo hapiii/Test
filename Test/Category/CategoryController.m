@@ -14,17 +14,23 @@
 
 
 @interface UIView ()
+
 @property (nonatomic, strong) UIView *nodeView;
+
+
 @end
 
 @implementation CategoryController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    self.view.nodeView = [[UIView alloc] init];
-    self.view.nodeView.frame = CGRectMake(0, 0, 200, 200);
-    self.view.nodeView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:self.view.nodeView];
+    
+//    self.view.nodeView = [[UIView alloc] init];
+//    self.view.nodeView.frame = CGRectMake(0, 0, 200, 200);
+//    self.view.nodeView.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:self.view.nodeView];
+     
     // Do any additional setup after loading the view.
 }
 

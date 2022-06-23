@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		022378292851FCE400FB30E0 /* SemaphoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 022378282851FCE400FB30E0 /* SemaphoreViewController.m */; };
+		02B122E5282BAFC20034EA9F /* LockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B122E4282BAFC20034EA9F /* LockManager.m */; };
 		4CA9790DA7714DDB100DDF27 /* libPods-Test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C43755950A952B7155C9FB63 /* libPods-Test.a */; };
 		BF07BEB3279F9C37005B323A /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF07BEB2279F9C37005B323A /* TextViewController.m */; };
 		BF07BEB6279F9F22005B323A /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF07BEB5279F9F22005B323A /* IndexViewController.m */; };
@@ -43,6 +45,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		022378272851FCE400FB30E0 /* SemaphoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemaphoreViewController.h; sourceTree = "<group>"; };
+		022378282851FCE400FB30E0 /* SemaphoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemaphoreViewController.m; sourceTree = "<group>"; };
+		02B122E3282BAFC20034EA9F /* LockManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockManager.h; sourceTree = "<group>"; };
+		02B122E4282BAFC20034EA9F /* LockManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockManager.m; sourceTree = "<group>"; };
 		7A9AF2D05EBFD6C6C3A9A37A /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
 		BF07BEB1279F9C36005B323A /* TextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
 		BF07BEB2279F9C37005B323A /* TextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
@@ -123,6 +129,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		022378262851FCBE00FB30E0 /* semaphore */ = {
+			isa = PBXGroup;
+			children = (
+				022378272851FCE400FB30E0 /* SemaphoreViewController.h */,
+				022378282851FCE400FB30E0 /* SemaphoreViewController.m */,
+			);
+			path = semaphore;
+			sourceTree = "<group>";
+		};
 		160E3E0CE03C7EC4F4F6A2D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +187,7 @@
 		BF28E1DC279A546C0054E838 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				022378262851FCBE00FB30E0 /* semaphore */,
 				BF7269C2280013DA0029FCBE /* Protocol */,
 				BF7269BD27FEE1F00029FCBE /* FrameBounds */,
 				BF72448127F856F20029FCBE /* ViewReusePool */,
@@ -317,6 +333,8 @@
 			children = (
 				BFE4063327F6A060007F1E90 /* LockViewController.h */,
 				BFE4063427F6A060007F1E90 /* LockViewController.m */,
+				02B122E3282BAFC20034EA9F /* LockManager.h */,
+				02B122E4282BAFC20034EA9F /* LockManager.m */,
 			);
 			path = Lock;
 			sourceTree = "<group>";
@@ -458,9 +476,11 @@
 				BF07BEB9279FA01B005B323A /* BaseViewController.m in Sources */,
 				BFB8899727F559E600BABE54 /* MethodForwardViewController.m in Sources */,
 				BF72448027F8477E0029FCBE /* EventView.m in Sources */,
+				022378292851FCE400FB30E0 /* SemaphoreViewController.m in Sources */,
 				BF7269C127FEE22E0029FCBE /* FrameBoundsViewController.m in Sources */,
 				BFE40DDA27F6D613007F1E90 /* RunLoopViewController.m in Sources */,
 				BF07BEC1279FA778005B323A /* TextShowView.m in Sources */,
+				02B122E5282BAFC20034EA9F /* LockManager.m in Sources */,
 				BFE4063527F6A060007F1E90 /* LockViewController.m in Sources */,
 				BF07BEB6279F9F22005B323A /* IndexViewController.m in Sources */,
 				BF7269C6280014270029FCBE /* ProtocolViewController.m in Sources */,

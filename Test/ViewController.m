@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     NSLog(@"%@",self.view.backgroundColor);
     self.navigationBar.translucent = NO;
     IndexViewController *vc = [[IndexViewController alloc] init];

@@ -1,18 +1,40 @@
 PODS:
-  - SDWebImage (5.12.4):
-    - SDWebImage/Core (= 5.12.4)
-  - SDWebImage/Core (5.12.4)
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - Masonry (1.1.0)
+  - SDWebImage (5.12.5):
+    - SDWebImage/Core (= 5.12.5)
+  - SDWebImage/Core (5.12.5)
 
 DEPENDENCIES:
+  - AFNetworking
+  - Masonry
   - SDWebImage
 
 SPEC REPOS:
   trunk:
+    - AFNetworking
+    - Masonry
     - SDWebImage
 
 SPEC CHECKSUMS:
-  SDWebImage: 631cf572cc93dfdfe54162e556410a61f1141928
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
 
-PODFILE CHECKSUM: a6675434d7d0a58c1991cf779bab7fceded3e03d
+PODFILE CHECKSUM: 4166a6d27ff85d47b6c2208c592b6501c934865e
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.10.1

@@ -7,7 +7,12 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-
+/*
+ 
+ A multiplier of 0 or a nil second item together with a location for the first attribute creates an illegal constraint of a location equal to a constant. Location attributes must be specified in pairs.
+ 
+ A multiplier of 0 or a nil second item together with a location for the first attribute creates an illegal constraint of a location equal to a constant. Location attributes must be specified in pairs.
+ */
 int main(int argc, char * argv[]) {
     NSString * appDelegateClassName;
     @autoreleasepool {

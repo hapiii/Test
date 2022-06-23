@@ -6,11 +6,14 @@
 //
 
 #import "LockViewController.h"
+#import "LockManager.h"
+
 
 @interface LockViewController ()
 @property (nonatomic, strong) NSLock *lock;
 @property (nonatomic, strong) NSRecursiveLock *recLock;
 @property (nonatomic, strong) dispatch_semaphore_t semaphore;
+@property (nonatomic, strong) LockManager *manager;
 @end
 
 @implementation LockViewController
@@ -18,13 +21,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.lock = [[NSLock alloc] init];
-    /*
-    self.semaphore = dispatch_semaphore_create(0);
+    self.manager = [[LockManager alloc] init];
+    
+    self.semaphore = dispatch_semaphore_create(1);
     //内部会 -1 如果 < 0,会主动阻塞
-    dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
+    //dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
     //内部 + 1,如果<= 0 唤起线程 ，被动行为
-    dispatch_semaphore_signal(self.semaphore);
-     */
+    //dispatch_semaphore_signal(self.semaphore);
+     
     /*NSRecursiveLock 递归锁
     NSLock
      [self.lock lock];
@@ -47,9 +51,34 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self conditionLockTest];
+    //[self conditionLockTest];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    int value = random() % 5;
+    [self.manager  addMoney:value];
+    });
+//    [self semaphoreAfterLock:2];
+//    [self semaphoreLock:1];
     
 }
+
+- (void)semaphoreLock:(int)index {
+    dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
+    NSLog(@"semaphoreLock ==>%i",index);
+    dispatch_semaphore_signal(self.semaphore);
+}
+
+- (void)semaphoreAfterLock:(int)index {
+    dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"semaphoreLock ==>%i",index);
+        dispatch_semaphore_signal(self.semaphore);
+    });
+    
+}
+
+
+
 
 - (void)lockA {
     [self.lock lock];

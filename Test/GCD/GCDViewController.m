@@ -6,26 +6,74 @@
 //
 
 #import "GCDViewController.h"
+#import "LockManager.h"
+#import <SDWebImage/SDWebImage.h>
+
+static dispatch_group_t _requestDispatchGroup;
 
 @interface GCDViewController (){
     dispatch_queue_t queue;
 }
 @property (nonatomic, strong) NSMutableDictionary *mArr;
-
+//@property (nonatomic, strong) dispatch_group_t requestDispatchGroup;
 @end
 
 @implementation GCDViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"gcd";
     queue = dispatch_queue_create("read_write_queue", DISPATCH_QUEUE_CONCURRENT);
     self.mArr = @{}.mutableCopy;
+    
     // Do any additional setup after loading the view.
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self queueLock];
+    /*//[self queueLock];
+    [self loadConfigMysteryData:1];
+    [self loadConfigMysteryData:2];
+    [self loadConfigMysteryData:3];
+    dispatch_group_notify(_requestDispatchGroup, dispatch_get_main_queue(), ^{
+        NSLog(@"执行group%@====>",self.title);
+        self.view.backgroundColor = [UIColor redColor];
+     0x102f069b0
+    });*/
+    
+    _requestDispatchGroup = dispatch_group_create();
+    [self mockGroup];
 }
+
+- (void)mockGroup {
+    NSArray *imageURLArray = @[@"1", @"2", @"3", @"4"];
+    dispatch_group_t group = dispatch_group_create();
+    
+    [imageURLArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            //dispatch_group_enter(group);
+            [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:imageURLArray[idx]] options:SDWebImageDownloaderLowPriority progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+                dispatch_group_leave(group);
+                NSLog(@"idx:%zd",idx);
+            }];
+        }];
+        dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+            NSLog(@"%@", imageURLArray);
+        });
+}
+
+- (void)dealloc {
+    NSLog(@"dealloc");
+}
+
+- (void)loadConfigMysteryData:(NSInteger)index {
+    
+    dispatch_group_enter(_requestDispatchGroup);
+    [LockManager lockHandle:^{
+        dispatch_group_leave(_requestDispatchGroup);
+    }];
+    
+    
+}
+
 
 ///队列卡死
 - (void)queueLock {
