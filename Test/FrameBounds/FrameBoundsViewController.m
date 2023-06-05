@@ -30,7 +30,6 @@
     [self.view addSubview:self.aView];
     [self.aView addSubview:self.bView];
     
-     
     // Do any additional setup after loading the view.
 }
 

@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		022378292851FCE400FB30E0 /* SemaphoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 022378282851FCE400FB30E0 /* SemaphoreViewController.m */; };
+		029FE008287BC3700088382A /* NSString+add.m in Sources */ = {isa = PBXBuildFile; fileRef = 029FE007287BC3700088382A /* NSString+add.m */; };
 		02B122E5282BAFC20034EA9F /* LockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B122E4282BAFC20034EA9F /* LockManager.m */; };
+		02E27CA428A2348100DCF647 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E27CA328A2348100DCF647 /* TestObject.m */; };
 		4CA9790DA7714DDB100DDF27 /* libPods-Test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C43755950A952B7155C9FB63 /* libPods-Test.a */; };
 		BF07BEB3279F9C37005B323A /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF07BEB2279F9C37005B323A /* TextViewController.m */; };
 		BF07BEB6279F9F22005B323A /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF07BEB5279F9F22005B323A /* IndexViewController.m */; };
@@ -47,8 +49,12 @@
 /* Begin PBXFileReference section */
 		022378272851FCE400FB30E0 /* SemaphoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemaphoreViewController.h; sourceTree = "<group>"; };
 		022378282851FCE400FB30E0 /* SemaphoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemaphoreViewController.m; sourceTree = "<group>"; };
+		029FE006287BC3700088382A /* NSString+add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+add.h"; sourceTree = "<group>"; };
+		029FE007287BC3700088382A /* NSString+add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+add.m"; sourceTree = "<group>"; };
 		02B122E3282BAFC20034EA9F /* LockManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockManager.h; sourceTree = "<group>"; };
 		02B122E4282BAFC20034EA9F /* LockManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockManager.m; sourceTree = "<group>"; };
+		02E27CA228A2348100DCF647 /* TestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
+		02E27CA328A2348100DCF647 /* TestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
 		7A9AF2D05EBFD6C6C3A9A37A /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
 		BF07BEB1279F9C36005B323A /* TextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
 		BF07BEB2279F9C37005B323A /* TextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
@@ -134,8 +140,17 @@
 			children = (
 				022378272851FCE400FB30E0 /* SemaphoreViewController.h */,
 				022378282851FCE400FB30E0 /* SemaphoreViewController.m */,
+				029FE006287BC3700088382A /* NSString+add.h */,
+				029FE007287BC3700088382A /* NSString+add.m */,
 			);
 			path = semaphore;
+			sourceTree = "<group>";
+		};
+		025364BE2A049F0F00893844 /* Texture */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Texture;
 			sourceTree = "<group>";
 		};
 		160E3E0CE03C7EC4F4F6A2D8 /* Frameworks */ = {
@@ -196,6 +211,7 @@
 				BFE4063227F6A047007F1E90 /* Lock */,
 				BFE4062E27F5DBD7007F1E90 /* GCD */,
 				BFE4062627F5BBC6007F1E90 /* BlockTest */,
+				025364BE2A049F0F00893844 /* Texture */,
 				BFB8899427F5599500BABE54 /* MethodForward */,
 				BFB87CFB27F4340A00BABE54 /* Category */,
 				BF28E1DD279A546C0054E838 /* AppDelegate.h */,
@@ -226,6 +242,8 @@
 				BF72447C27F8475C0029FCBE /* EventViewController.m */,
 				BF72447E27F8477E0029FCBE /* EventView.h */,
 				BF72447F27F8477E0029FCBE /* EventView.m */,
+				02E27CA228A2348100DCF647 /* TestObject.h */,
+				02E27CA328A2348100DCF647 /* TestObject.m */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -385,7 +403,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					BF28E1D9279A546C0054E838 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -457,6 +475,7 @@
 				BFB87D0427F4347C00BABE54 /* CategoryObject+AMethod.m in Sources */,
 				BFB87CFE27F4343400BABE54 /* CategoryController.m in Sources */,
 				BFE4063127F5DBEA007F1E90 /* GCDViewController.m in Sources */,
+				02E27CA428A2348100DCF647 /* TestObject.m in Sources */,
 				BFB881AF27F4594900BABE54 /* TestKVOViewController.m in Sources */,
 				BF28E1E5279A546C0054E838 /* ViewController.m in Sources */,
 				BF28E1DF279A546C0054E838 /* AppDelegate.m in Sources */,
@@ -474,6 +493,7 @@
 				BF72448A27F857730029FCBE /* ViewReusePoolViewController.m in Sources */,
 				BF28E1E2279A546C0054E838 /* SceneDelegate.m in Sources */,
 				BF07BEB9279FA01B005B323A /* BaseViewController.m in Sources */,
+				029FE008287BC3700088382A /* NSString+add.m in Sources */,
 				BFB8899727F559E600BABE54 /* MethodForwardViewController.m in Sources */,
 				BF72448027F8477E0029FCBE /* EventView.m in Sources */,
 				022378292851FCE400FB30E0 /* SemaphoreViewController.m in Sources */,
@@ -546,6 +566,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -560,7 +581,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -605,6 +626,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -613,7 +635,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -630,6 +652,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7BM224Q2NE;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Test/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -658,6 +681,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7BM224Q2NE;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Test/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

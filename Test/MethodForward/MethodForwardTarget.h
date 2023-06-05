@@ -13,6 +13,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)test;
 - (void)otherTest;
+
++ (void)logTest;
+
+@end
+
+
+@interface ChildMethodForwardTarget : MethodForwardTarget
+
++ (void)testAction;
+
 @end
 
 NS_ASSUME_NONNULL_END

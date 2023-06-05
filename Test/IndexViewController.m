@@ -7,6 +7,7 @@
 
 #import "IndexViewController.h"
 #import "AppDelegate.h"
+#import <AsyncDisplayKit/AsyncDisplayKit.h>
 
 @interface IndexViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tb;
@@ -80,7 +81,8 @@
             @"ViewReusePoolViewController",
             @"FrameBoundsViewController",
             @"ProtocolViewController",
-            @"SemaphoreViewController"
+            @"SemaphoreViewController",
+            @"TextureViewController"
         ].mutableCopy;
     }
     return _routers;
@@ -99,7 +101,8 @@
         @"ViewReusePoolViewController" : @"自动释放池",
         @"FrameBoundsViewController" : @"frame 和 bounds",
         @"ProtocolViewController" : @"协议",
-        @"SemaphoreViewController" : @"信号量"
+        @"SemaphoreViewController" : @"信号量",
+        @"TextureViewController" : @"Texture"
     };
     return dic;
 }

@@ -23,6 +23,20 @@
     self.navigationBar.translucent = NO;
     IndexViewController *vc = [[IndexViewController alloc] init];
     [self pushViewController:vc animated:NO];
+    
+    NSLog(@"1");
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSLog(@"2");
+        [self performSelector:@selector(loadBigImage) withObject:nil afterDelay:1];
+        NSLog(@"3");
+    });
+    NSLog(@"4");
 }
+
+- (void)loadBigImage {
+    NSLog(@"5");
+}
+
 
 @end

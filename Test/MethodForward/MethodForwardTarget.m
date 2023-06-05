@@ -66,4 +66,23 @@ void testImp (void) {
     NSLog(@"forwardInvocation:");
 }
 
++ (void)logTest {
+    NSLog(@"superMethodForwardTarget");
+}
+@end
+
+@implementation ChildMethodForwardTarget
+
++ (void)logTest {
+    NSLog(@"ChildMethodForwardTarget");
+}
+
+
++ (void)testAction {
+    [self logTest];
+    [super logTest];
+    NSLog(@"%@", NSStringFromClass(self.class));
+    NSLog(@"%@", NSStringFromClass(super.class));
+}
+
 @end
