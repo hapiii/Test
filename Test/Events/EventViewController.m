@@ -42,7 +42,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"controller touchesBegan");
-    [TestObject  test];
+    //[TestObject  test];
 }
 /*
 #pragma mark - Navigation

@@ -14,9 +14,9 @@
 
 @implementation NSObject (add)
 
-- (void)test {
-    NSLog(@"TestObject test");
-}
+//- (void)test {
+//    NSLog(@"TestObject test");
+//}
 
 @end
 
