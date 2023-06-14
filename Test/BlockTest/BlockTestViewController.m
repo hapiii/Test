@@ -23,7 +23,7 @@
     __weak typeof(self) weakSelf = self;
     self.test = ^(NSString *str) {
         typeof(weakSelf) strongSelf = weakSelf;
-        self.view.backgroundColor = [UIColor purpleColor];
+        weakSelf.view.backgroundColor = [UIColor purpleColor];
         NSLog(@"%@",str);
     };
     

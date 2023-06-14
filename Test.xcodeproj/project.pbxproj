@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		022378292851FCE400FB30E0 /* SemaphoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 022378282851FCE400FB30E0 /* SemaphoreViewController.m */; };
+		022776EB2A387540008223E5 /* MCBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 022776EA2A387540008223E5 /* MCBlock.m */; };
 		029FE008287BC3700088382A /* NSString+add.m in Sources */ = {isa = PBXBuildFile; fileRef = 029FE007287BC3700088382A /* NSString+add.m */; };
 		02B122E5282BAFC20034EA9F /* LockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B122E4282BAFC20034EA9F /* LockManager.m */; };
 		02E27CA428A2348100DCF647 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E27CA328A2348100DCF647 /* TestObject.m */; };
@@ -49,6 +50,8 @@
 /* Begin PBXFileReference section */
 		022378272851FCE400FB30E0 /* SemaphoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemaphoreViewController.h; sourceTree = "<group>"; };
 		022378282851FCE400FB30E0 /* SemaphoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemaphoreViewController.m; sourceTree = "<group>"; };
+		022776E92A387540008223E5 /* MCBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCBlock.h; sourceTree = "<group>"; };
+		022776EA2A387540008223E5 /* MCBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCBlock.m; sourceTree = "<group>"; };
 		029FE006287BC3700088382A /* NSString+add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+add.h"; sourceTree = "<group>"; };
 		029FE007287BC3700088382A /* NSString+add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+add.m"; sourceTree = "<group>"; };
 		02B122E3282BAFC20034EA9F /* LockManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockManager.h; sourceTree = "<group>"; };
@@ -326,6 +329,8 @@
 			children = (
 				BFE4062727F5BBE8007F1E90 /* BlockTestViewController.h */,
 				BFE4062827F5BBE8007F1E90 /* BlockTestViewController.m */,
+				022776E92A387540008223E5 /* MCBlock.h */,
+				022776EA2A387540008223E5 /* MCBlock.m */,
 			);
 			path = BlockTest;
 			sourceTree = "<group>";
@@ -472,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF07BEB3279F9C37005B323A /* TextViewController.m in Sources */,
+				022776EB2A387540008223E5 /* MCBlock.m in Sources */,
 				BFB87D0427F4347C00BABE54 /* CategoryObject+AMethod.m in Sources */,
 				BFB87CFE27F4343400BABE54 /* CategoryController.m in Sources */,
 				BFE4063127F5DBEA007F1E90 /* GCDViewController.m in Sources */,
