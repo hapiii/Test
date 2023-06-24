@@ -82,7 +82,9 @@
             @"FrameBoundsViewController",
             @"ProtocolViewController",
             @"SemaphoreViewController",
-            @"TextureViewController"
+            @"TextureViewController",
+            @"MemoryViewController",
+            @"ImageViewController"
         ].mutableCopy;
     }
     return _routers;
@@ -102,7 +104,9 @@
         @"FrameBoundsViewController" : @"frame 和 bounds",
         @"ProtocolViewController" : @"协议",
         @"SemaphoreViewController" : @"信号量",
-        @"TextureViewController" : @"Texture"
+        @"TextureViewController" : @"Texture",
+        @"MemoryViewController" : @"内存管理"
+        @"ImageViewController" : @"imageView"
     };
     return dic;
 }

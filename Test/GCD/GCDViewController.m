@@ -39,9 +39,11 @@ static dispatch_group_t _requestDispatchGroup;
         self.view.backgroundColor = [UIColor redColor];
      0x102f069b0
     });*/
-    
-    _requestDispatchGroup = dispatch_group_create();
-    [self mockGroup];
+    dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"%@",[NSThread currentThread]);
+    });
+//    _requestDispatchGroup = dispatch_group_create();
+//    [self mockGroup];
 }
 
 - (void)mockGroup {

@@ -12,6 +12,8 @@
 		029FE008287BC3700088382A /* NSString+add.m in Sources */ = {isa = PBXBuildFile; fileRef = 029FE007287BC3700088382A /* NSString+add.m */; };
 		02B122E5282BAFC20034EA9F /* LockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B122E4282BAFC20034EA9F /* LockManager.m */; };
 		02E27CA428A2348100DCF647 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E27CA328A2348100DCF647 /* TestObject.m */; };
+		140D61492A42CD7100BF5F7E /* MemoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 140D61482A42CD7100BF5F7E /* MemoryViewController.m */; };
+		140D614D2A430E2F00BF5F7E /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 140D614C2A430E2F00BF5F7E /* ImageViewController.m */; };
 		4CA9790DA7714DDB100DDF27 /* libPods-Test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C43755950A952B7155C9FB63 /* libPods-Test.a */; };
 		BF07BEB3279F9C37005B323A /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF07BEB2279F9C37005B323A /* TextViewController.m */; };
 		BF07BEB6279F9F22005B323A /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF07BEB5279F9F22005B323A /* IndexViewController.m */; };
@@ -58,6 +60,10 @@
 		02B122E4282BAFC20034EA9F /* LockManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockManager.m; sourceTree = "<group>"; };
 		02E27CA228A2348100DCF647 /* TestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
 		02E27CA328A2348100DCF647 /* TestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
+		140D61472A42CD7100BF5F7E /* MemoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryViewController.h; sourceTree = "<group>"; };
+		140D61482A42CD7100BF5F7E /* MemoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryViewController.m; sourceTree = "<group>"; };
+		140D614B2A430E2F00BF5F7E /* ImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		140D614C2A430E2F00BF5F7E /* ImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		7A9AF2D05EBFD6C6C3A9A37A /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
 		BF07BEB1279F9C36005B323A /* TextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
 		BF07BEB2279F9C37005B323A /* TextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
@@ -156,6 +162,24 @@
 			path = Texture;
 			sourceTree = "<group>";
 		};
+		140D61462A42CD5600BF5F7E /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				140D61472A42CD7100BF5F7E /* MemoryViewController.h */,
+				140D61482A42CD7100BF5F7E /* MemoryViewController.m */,
+			);
+			path = Memory;
+			sourceTree = "<group>";
+		};
+		140D614A2A430E1E00BF5F7E /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				140D614B2A430E2F00BF5F7E /* ImageViewController.h */,
+				140D614C2A430E2F00BF5F7E /* ImageViewController.m */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		160E3E0CE03C7EC4F4F6A2D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +229,8 @@
 		BF28E1DC279A546C0054E838 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				140D614A2A430E1E00BF5F7E /* Image */,
+				140D61462A42CD5600BF5F7E /* Memory */,
 				022378262851FCBE00FB30E0 /* semaphore */,
 				BF7269C2280013DA0029FCBE /* Protocol */,
 				BF7269BD27FEE1F00029FCBE /* FrameBounds */,
@@ -482,6 +508,8 @@
 				BFB87CFE27F4343400BABE54 /* CategoryController.m in Sources */,
 				BFE4063127F5DBEA007F1E90 /* GCDViewController.m in Sources */,
 				02E27CA428A2348100DCF647 /* TestObject.m in Sources */,
+				140D614D2A430E2F00BF5F7E /* ImageViewController.m in Sources */,
+				140D61492A42CD7100BF5F7E /* MemoryViewController.m in Sources */,
 				BFB881AF27F4594900BABE54 /* TestKVOViewController.m in Sources */,
 				BF28E1E5279A546C0054E838 /* ViewController.m in Sources */,
 				BF28E1DF279A546C0054E838 /* AppDelegate.m in Sources */,

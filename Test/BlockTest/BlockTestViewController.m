@@ -52,8 +52,7 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-int global_var = 4;
-static int static_global_var = 5;
+int global_varr = 4;
 
 - (void)blockTest {
     
@@ -72,8 +71,8 @@ static int static_global_var = 5;
         //指针截获静态局部变量
         NSLog(@"静态变量 %d",static_var);
         //全局变量，不截获.
-        NSLog(@"全局变量 %d",global_var);
-        NSLog(@"全局静态变量 %d",static_global_var);
+        NSLog(@"全局变量 %d",global_varr);
+        //NSLog(@"全局静态变量 %d",static_global_var);
         NSLog(@"实例变量 %@",self.value);
         
         [arr addObject:@"122"];
@@ -85,20 +84,10 @@ static int static_global_var = 5;
     obj = [[CategoryObject alloc] init];
     obj.title = @"hello";
     static_var = 1003;
-    global_var = 1004;
-    static_global_var = 1005;
+    global_varr = 1004;
     self.value = @"1006";
     
     block();
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -21,7 +21,15 @@
 + (void)runRequest {
     CFRunLoopSourceContext context = {};
     CFRunLoopSourceRef source = CFRunLoopSourceCreate(kCFAllocatorDefault, 0, &context);
+    /// 常驻线程
     CFRunLoopAddSource(CFRunLoopGetCurrent(), source, kCFRunLoopDefaultMode);
+    
+    @autoreleasepool {
+        //运行
+        CFRunLoopRunInMode(kCFRunLoopDefaultMode, 1.0e10, true);
+    }
+    
+    
     NSTimer *timer = [[NSTimer alloc] init];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 }
