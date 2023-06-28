@@ -105,7 +105,7 @@
         @"ProtocolViewController" : @"协议",
         @"SemaphoreViewController" : @"信号量",
         @"TextureViewController" : @"Texture",
-        @"MemoryViewController" : @"内存管理"
+        @"MemoryViewController" : @"内存管理",
         @"ImageViewController" : @"imageView"
     };
     return dic;

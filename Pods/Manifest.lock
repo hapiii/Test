@@ -1,37 +1,30 @@
 PODS:
-  - IGListDiffKit (4.0.0)
-  - IGListKit (4.0.0):
-    - IGListDiffKit (= 4.0.0)
+  - Aspects (1.4.1)
+  - CTMediator (48)
   - Masonry (1.1.0)
-  - SDWebImage (5.13.4):
-    - SDWebImage/Core (= 5.13.4)
-  - SDWebImage/Core (5.13.4)
-  - Texture/Core (3.1.0)
-  - Texture/IGListKit (3.1.0):
-    - IGListDiffKit (~> 4.0)
-    - IGListKit (~> 4.0)
-    - Texture/Core
+  - SDWebImage (5.16.0):
+    - SDWebImage/Core (= 5.16.0)
+  - SDWebImage/Core (5.16.0)
 
 DEPENDENCIES:
+  - Aspects
+  - CTMediator
   - Masonry
   - SDWebImage
-  - Texture/IGListKit (= 3.1.0)
 
 SPEC REPOS:
   trunk:
-    - IGListDiffKit
-    - IGListKit
+    - Aspects
+    - CTMediator
     - Masonry
     - SDWebImage
-    - Texture
 
 SPEC CHECKSUMS:
-  IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
-  IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  CTMediator: 3f3578b525b3a46a7a2f92a99922ec40363f4269
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  SDWebImage: e5cc87bf736e60f49592f307bdf9e157189298a3
-  Texture: 2e8ab2519452515f7f5a520f5a8f7e0a413abfa3
+  SDWebImage: 2aea163b50bfcb569a2726b6a754c54a4506fcf6
 
-PODFILE CHECKSUM: 01769e718509011f77950bc98904d01343d4b54b
+PODFILE CHECKSUM: 3b8424706c00ffb765a5eb312157336f8af50ca0
 
 COCOAPODS: 1.12.1

@@ -24,14 +24,16 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     NSString *str = @"hello";
+    self.title = str;
     NSMutableString *mstr = str.mutableCopy;
     
     self.copTitle = str;
-    self.troTitle = mstr;
+    self.troTitle = self.title;
     //0x104dc1450 0x600003348630 0x104dc1450 0x600003348630
     NSLog(@"%p %p %p %p", str, mstr, self.copTitle, self.troTitle);
     NSLog(@"%@ %@ %@ %@", str, mstr, self.copTitle, self.troTitle);
     
+    self.title = @"wq";
     str = @"hello2";
     mstr = @"world".mutableCopy;
     

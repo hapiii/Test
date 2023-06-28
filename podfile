@@ -6,7 +6,9 @@ target 'Test' do
 # pod 'AFNetworking'
  pod 'SDWebImage'
  pod 'Masonry'
- pod 'Texture/IGListKit', '3.1.0'
+ #pod 'Texture/IGListKit', '3.1.0'
+ pod 'Aspects'
+ pod 'CTMediator'
  #pod 'YYKit'
 end
 
